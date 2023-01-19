@@ -33,7 +33,7 @@ function playSong(){
   song.play();
 }
 
- async function setSong(index){
+  function setSong(index){
   let track = songs[index];
   seek.value = 0;
   currentSong = index;
@@ -45,12 +45,12 @@ function playSong(){
   artiste.innerHTML = track.artiste;
 
   currentTime.innerHTML = '00:00';
-  await setTimeout(()=>{
+  setTimeout(()=>{
     seek.max = song.duration;
     songDuration.innerHTML = formatTime(song.duration);
   }, 700);
   
-  await setNextSong(index)
+  setNextSong(index)
  }
 
  setSong(2);
