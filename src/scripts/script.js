@@ -102,7 +102,14 @@ prevBtn.addEventListener('click', () =>{
 
 function setNextSong(index){
   let next = songs[index + 1] ;
+  if(next > songs.length-1){
+    next = songs[0];
+    nextSongArt.style.backgroundImage = `url('${next.smallCover}')`;
+    nextArtiste.innerHTML = next.artiste;
+    nextSong.innerHTML = next.title;
+  }else{
   nextSongArt.style.backgroundImage = `url('${next.smallCover}')`;
   nextArtiste.innerHTML = next.artiste;
   nextSong.innerHTML = next.title;
+  }
 }
