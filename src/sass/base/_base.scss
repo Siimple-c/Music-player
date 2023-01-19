@@ -53,7 +53,7 @@ img{
 .upper-section{
   height: 60%;
   border-bottom: .1em solid $color-black;
-  background-image: url(../../src/assets/pictures/eminem-big.jpg);
+  background-image: url(../../assets/pictures/eminem-big.jpg);
   background-size: cover;
   display: flex;
   align-items: flex-end;
@@ -73,7 +73,7 @@ img{
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background-image: url(../../src/assets/pictures/Eminem.png);
+  background-image: url(../../assets/pictures/Eminem.png);
   background-size: cover;
   box-shadow: $box-shadow;
   position: relative;
@@ -234,7 +234,7 @@ img{
 .next-song_art{
  width: 5rem;
  height: 4.5rem;
- background-image: url(../../src/assets/pictures/next\ song\ placeholder.jpg);
+ background-image: url(../../assets/pictures/next\ song\ placeholder.jpg);
  background-size: contain;
  margin-right: 1.5rem;
 }
