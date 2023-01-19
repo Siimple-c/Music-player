@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/sass/style.css">
+  <script src="https://kit.fontawesome.com/f859ba5ea8.js" crossorigin="anonymous"></script>
+  <script src="../src/scripts/api.js" defer></script>
+  <script src="../src/scripts/script.js" defer></script>
+  <title>Music Player</title>
+</head>
+<body>
+  <audio src="" id="audio"></audio>
+
+  <div class="music-player-container">
+    <div class="music-player">
+      <!-- CURRENT SONG CONTROLS -->
+      <div class="upper-section">
+        <div class="player-controls">
+          <div class="vinyl"></div>
+          <!-- CONTROLS -->
+          <div class="controls">
+            <div class="buttons">
+              <button class="btn prev-btn">
+              <img src="../src/assets/pictures/backward.png" alt="">
+              </button>
+              <button class="play-btn pause">
+                <span></span>
+                <span></span>
+              </button>
+              <button class="btn next-btn"><img src="../src/assets/pictures/forward.png" alt=""></button>
+            </div>
+            <div class="song-duration">
+              <input type="range" value="0" class="seek"> 
+              <span class="current-time">00:00</span>
+              <span class="song-length">00:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SONG DETAILS -->
+      <div class="lower-section">
+        <div class="lower-section_upper">
+          <h1 class="song-title">Song Title</h1>
+          <p class="artiste">Artiste</p>
+        </div>
+        <!-- NEXT SONG DETAILS -->
+        <div class="lower-section_lower">
+          <div class="lower-section_lower-up">
+            <h5>Up Next</h5>
+          </div>
+          <div class="lower-section_lower-down">
+            <div class="next-song_art"> </div>
+            <div class="next-song_details">
+              <h6 class="next-song">Song title</h6>
+              <p class="next-artiste">Artiste Name</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

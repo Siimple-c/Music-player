@@ -1,0 +1,240 @@
+@use '../abstracts/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+  font-size: 62.5%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+
+html{
+  scroll-behavior: smooth;
+  border-radius: 16px;
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  background: #eeeaea;
+  color: $color-dark;
+  overflow: hidden;
+}
+
+img{
+ width: 100%;
+}
+
+.music-player-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.music-player{
+  width: 40rem;
+  height: 80vh;
+  border-radius: 2rem;
+  background: $color-primary;
+  box-shadow: $box-shadow;
+  color: $color-black;
+}
+
+.upper-section{
+  height: 60%;
+  border-bottom: .1em solid $color-black;
+  background-image: url(../../src/assets/pictures/eminem-big.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.player-controls{
+  height: 30%;
+  width: 100%;
+  background: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.vinyl{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-image: url(../../src/assets/pictures/Eminem.png);
+  background-size: cover;
+  box-shadow: $box-shadow;
+  position: relative;
+  margin-right: 4rem;
+  animation: rotate 20s linear infinite;
+  animation-play-state:paused;
+  &.play{
+    animation-play-state: running;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    border-radius: 50%;
+  }
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.song-duration{
+  width: 100%;
+  position: relative;
+  color: $color-primary;
+  font-size: .9rem;
+}
+
+.current-time,
+.song-length{
+  display: inline-block;
+  width: 3rem;
+}
+
+.song-length{
+  position: absolute;
+  right: 0;
+}
+
+.seek{
+  -webkit-appearance: none;
+  width: 100%;
+  height: .5rem;
+  background: $color-primary;
+  overflow: hidden;
+  margin-top: 1rem;
+  cursor: pointer;
+  &::-moz-range-thumb,
+  &::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width: .5rem;
+    height: .5rem;
+    background: $color-secondary;
+    box-shadow: -30rem 0 0 30rem $color-secondary;
+  }
+}
+
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  
+}
+
+.play-btn{
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  margin-left: .7rem;
+  margin-right: .7rem;
+  border-radius: 50%;
+  cursor: pointer;
+  span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 20%;
+    height: 70%;
+    background: rgba(0,0,0,1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: all ease 30ms;
+    &:nth-child(2){
+      left: 55%;
+      transform-origin: center;
+    }
+  }
+  // Play-Pause button animation
+   &.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+   }
+   &.pause span:nth-child(1){
+     width: 45%;
+     left: 53%;
+     transform: translate(-50%, -50%);
+     border-radius: 0;
+     clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+   }
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  img{
+    width: 50%;
+    height: 70%;
+  }
+}
+
+.lower-section_upper{
+  border-bottom: 1px solid;
+  padding: 1rem;
+  text-align: center;
+  background: $color-light;
+  h1{
+    font-weight: 500;
+    margin-bottom: .5rem;
+  }
+  p{
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+.lower-section_lower{
+  padding: 1rem 2rem;
+  &-up{
+    margin-bottom: .5rem;
+  }
+  &-down{
+    display: flex;
+    align-items: center;
+    p{
+      font-size: 1rem;
+    }
+  }
+}
+
+.next-song_art{
+ width: 5rem;
+ height: 4.5rem;
+ background-image: url(../../src/assets/pictures/next\ song\ placeholder.jpg);
+ background-size: contain;
+ margin-right: 1.5rem;
+}
