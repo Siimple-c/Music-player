@@ -37,6 +37,11 @@ img {
   align-items: center;
   padding: 0 1.5rem;
 }
+@media screen and (max-width: 750px) {
+  .music-player-container {
+    margin-top: -3rem;
+  }
+}
 
 .music-player {
   width: 40rem;

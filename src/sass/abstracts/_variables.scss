@@ -4,3 +4,7 @@ $color-primary: #fff;
 $color-light: #bcbcba;
 $color-secondary: #ff9409;
 $box-shadow: .1rem .1rem .7rem $color-dark, -.1rem -.1rem .7rem $color-dark;
+
+$breakpoints: (
+  mobile: 750px,
+)

@@ -39,6 +39,9 @@ img{
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
+  @include mobile {
+    margin-top: -3rem;
+  }
 }
 
 .music-player{
